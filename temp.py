@@ -60,7 +60,6 @@ def functionsPy(functions):
         else:
             print("função não existente")
   
-        
 def vejaSoCagaTronco():
     Converter('vejasocagatronco', printNaTela)
 def falaComigoLudmillo():
@@ -71,7 +70,6 @@ def vocePodeFazerIssoSeborreio():
     Converter("vocePodeFazerIssoSeborreio", divValores)
 def calmaAeCalabreso():
     Converter("calmaAeCalabreso", multValores)
-    
 # def vouTerQueRepetirIvetoSangalo():
 #     Converter("vouTerQueRepetirIvetoSangalo")
     
@@ -82,7 +80,6 @@ def Converter(func, acao):
     conversao.append(endComando)
     for i in conversao:
          CodigoInteiro.append(str(i))
-         
     
 with open('EscrevaOCodigoAqui.txt', 'r') as file:
     codigo = file.read().strip()
@@ -91,6 +88,3 @@ interpret(codigo)
     
 with open('resultCompilador.txt', 'w') as file:
     file.write(", ".join(CodigoInteiro))
-   
-    
-    
