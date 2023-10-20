@@ -1,55 +1,90 @@
-functions = []
+printNaTela = 111
+sumValores = 222
+subValores= 333
+divValores = 444
+multValores = 555
+endComando = 999 
+
+
+
+CodigoInteiro = []
 
 def interpret(codigo):
+    
+    functions = []
     
     palavras = codigo.split()
     
     for palavra in palavras:
-        if palavra.startswith('veja so caga tronco(') and codigo.endswith(')'):
+        if palavra.startswith('vejasocagatronco(') and codigo.endswith(')'):
             functions.append(0)
-        if palavra.startswith('scan(') and codigo.endswith(')'):
+            
+        elif palavra.startswith('falaComigoLudmillo(') and codigo.endswith(')'):
             functions.append(1)
-        if palavra.startswith('if(') and codigo.endswith(')'):
+            
+        elif palavra.startswith('eaeTilapio(') and codigo.endswith(')'):
             functions.append(2)
-        if palavra.startswith('elif(') and codigo.endswith(')'):
+            
+        elif palavra.startswith('vocePodeFazerIssoSeborreio(') and codigo.endswith(')'):
             functions.append(3)
-        if palavra.startswith('else(') and codigo.endswith(')'):
+            
+        elif palavra.startswith('calmaAeCalabreso(') and codigo.endswith(')'):
             functions.append(4)
-        if palavra.startswith('for(') and codigo.endswith(')'):
-            functions.append(5)
-        if palavra.startswith('while(') and codigo.endswith(')'):
-            functions.append(6)
+            
+        # elif palavra.startswith('for(') and codigo.endswith(')'):
+        #     functions.append(5)
         else:
             print("Erro: Comando desconhecido.")
             
+        functionsPy(functions)
+            
 def functionsPy(functions):
+    
     for function in functions:
         if function == 0:
-            vejasocagatronco()
-        if function == 1:
-            # scan()
-        if function == 2:
-            # if()
-        if function == 3:
-            # elif()
-        if function == 4:
-            # else()
-        if function == 5:
-            # for()
-        if function == 6:
-            # while()
-        
+            vejaSoCagaTronco()
             
-
-
-def vejasocagatronco:
-    print("a")
+        elif function == 1:
+            falaComigoLudmillo()
             
+        elif function == 2:
+            eaeTilapio()
+            
+        elif function == 3:
+            vocePodeFazerIssoSeborreio()
+            
+        elif function == 4:
+            calmaAeCalabreso()
+            
+        elif function == 5:
+            vouTerQueRepetirIvetoSangalo()
+            
+        else:
+            print("função não existente")
+  
         
-        
-        
-codigo = 'print("banana") if(true)'
+def vejaSoCagaTronco():
+    Converter('vejasocagatronco', printNaTela)
+def falaComigoLudmillo():
+    Converter("falaComigoLudmillo", sumValores)
+def eaeTilapio():
+    Converter("eaeTilapio", subValores)
+def vocePodeFazerIssoSeborreio():
+    Converter("vocePodeFazerIssoSeborreio", divValores)
+def calmaAeCalabreso():
+    Converter("calmaAeCalabreso", multValores)
+# def vouTerQueRepetirIvetoSangalo():
+#     Converter("vouTerQueRepetirIvetoSangalo")
+    
+def Converter(func, acao):
+    content = codigo.split(f'{func}(')[1].rsplit(')', 1)[0].strip('"')
+    conversao = [ord(char) for char in content]
+    conversao.insert(0, acao )
+    conversao.append(endComando)
+            
+    print(conversao)
+            
+codigo = 'eaeTilapio("banana")'
 interpret(codigo)
 
-for i in functions:
-    print(i)
+    
