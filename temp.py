@@ -1,11 +1,9 @@
-printNaTela = 111
-sumValores = 222
-subValores= 333
-divValores = 444
-multValores = 555
+printNaTela = 333
+sumValores = 444
+subValores= 555
+divValores = 666
+multValores = 777
 endComando = 999 
-
-
 
 CodigoInteiro = []
 
@@ -36,7 +34,7 @@ def interpret(codigo):
         else:
             print("Erro: Comando desconhecido.")
             
-        functionsPy(functions)
+    functionsPy(functions)
             
 def functionsPy(functions):
     
@@ -56,8 +54,8 @@ def functionsPy(functions):
         elif function == 4:
             calmaAeCalabreso()
             
-        elif function == 5:
-            vouTerQueRepetirIvetoSangalo()
+        # elif function == 5:
+        #     vouTerQueRepetirIvetoSangalo()
             
         else:
             print("função não existente")
@@ -73,18 +71,26 @@ def vocePodeFazerIssoSeborreio():
     Converter("vocePodeFazerIssoSeborreio", divValores)
 def calmaAeCalabreso():
     Converter("calmaAeCalabreso", multValores)
+    
 # def vouTerQueRepetirIvetoSangalo():
 #     Converter("vouTerQueRepetirIvetoSangalo")
     
 def Converter(func, acao):
-    content = codigo.split(f'{func}(')[1].rsplit(')', 1)[0].strip('"')
+    content = codigo.split(f'{func}(')[1].split(')', 1)[0].strip('"')
     conversao = [ord(char) for char in content]
     conversao.insert(0, acao )
     conversao.append(endComando)
-            
-    print(conversao)
-            
-codigo = 'eaeTilapio("banana")'
-interpret(codigo)
+    for i in conversao:
+         CodigoInteiro.append(str(i))
+         
+    
+with open('EscrevaOCodigoAqui.txt', 'r') as file:
+    codigo = file.read().strip()
 
+interpret(codigo)
+    
+with open('resultCompilador.txt', 'w') as file:
+    file.write(", ".join(CodigoInteiro))
+   
+    
     
