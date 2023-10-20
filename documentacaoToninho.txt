@@ -1,0 +1,29 @@
+TONINHOTORNADO Programming Language
+
+INTRODUÇÃO
+"Toninho Tornado" é uma linguagem de programação simples que fornece funcionalidades básicas para operações de impressão e soma.
+
+FUNÇÕES
+-- vejaSoCagaTronco
+A função vejaSoCagaTronco é usada para imprimir um texto na tela. Ela funciona de forma semelhante ao comando print em outras linguagens de programação.
+
+.Sintaxe:
+vejaSoCagaTronco("texto")
+
+.Parâmetros:
+"texto": Uma string que será impressa na tela.
+
+BugNotFixed: não é possível usar duas funções vejaSoCagaTronco seguidas!
+
+
+
+-- falaComigoLudmillo
+A função vejaSoCagaTronco é usada para imprimir um texto na tela. Ela funciona de forma a somar os argumentos dentre os parênteses, mostrando no console
+seu resultado.
+
+.Sintaxe:
+falaComigoLudmillo(valor+valor)
+
+.Parâmetros:
+valor 1 + valor 2...: Valores que serão somados e impressos na tela.
+
